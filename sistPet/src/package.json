@@ -1,0 +1,27 @@
+{
+  "name": "users_api",
+  "version": "0.0.1",
+  "description": "api para sistema sistPet",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "sistPet",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "html-pdf": "^3.0.1",
+    "knex": "^0.95.11",
+    "multer": "^1.4.3",
+    "mysql2": "^2.3.0",
+    "nodemailer": "^6.7.0",
+    "save": "^2.4.0",
+    "sequelize": "^6.7.0",
+    "uuid": "^8.3.2"
+  }
+}

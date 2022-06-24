@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>sistPet</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/pet.css">
+
+</head>
+
+<header>
+    <div class="container">
+        <a href="./index.html" class="logo">Meu amigo Pet</a>
+               
+        <a href="#"> 
+            <img id="logout" src="./img/logout.png">
+        </a>
+            
+    </div>
+</header>
+
+<body>
+    <section style="display: flex; justify-content: center; ">
+        <div class="row">
+
+
+        </div>
+    </section>
+</body>
+<footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/pets.js"></script>
+    <script>
+        fetch('http://localhost:2424/pets').then(result => result.json())
+            .then(data => {
+                data.forEach(element => {
+                    $('.row').append(`
+                            <!-- CARD -->
+                            <div class="card">
+                            <img style="height: 255px;" src="${element.foto}">
+                            <h3 style="margin-bottom: 2%">${element.nome} / <span>${element.raca}</span></h3>
+                            <h4>Pelagem : ${element.pelagem} </h4>
+                            <h4>Sexo : ${element.sexo} </h4>
+                            <h4>porte : ${element.porte} </h4>
+                            <h4>Comportamento : ${element.comportamento} </h4>
+                            <h4>Vacinado : ${element.vacinado} </h4>
+                            <h4>Status : ${element.status} </h4>
+                            <a class="btnVisitar" href="/frontEnd/agendamento.html"> Visitar </a>
+                                </div>
+                            <!-- END CARD -->
+                    `)
+                });
+            })
+    </script>
+    </script>
+</footer>
+
+</html>

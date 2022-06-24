@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+        </head>
+        <body>
+           <h2>Relátorio de Adoções</h2><hr>
+           <table>
+               <thead>
+                   <tr>
+                       <th>Adotante</th>
+                       <th>Pet</th>
+                       <th>Funcionário</th>
+                       <th>Data</th>
+                       <th>Status</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <% dados.forEach((element)=>{ %>
+                    <tr>
+                        <td><%= element.nomeAdotante %></td>
+                        <td><%= element.nomePet %></td>
+                        <td><%= element.nomeFuncionario %></td>
+                        <td><%= element.data %></td>
+                        <td><%= element.statusAdocao %></td>
+                    </tr>
+                   <% }); %>
+               </tbody>
+           </table>
+        </body>
+        <script>
+            window.addEventListener("load", window.print());
+        </script>
+    </html>

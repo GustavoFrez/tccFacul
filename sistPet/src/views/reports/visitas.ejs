@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+        </head>
+        <body>
+           <h2>Relátorio de Visitas</h2><hr>
+           <table>
+               <thead>
+                   <tr>
+                       <th>Horário</th>
+                       <th>Dia</th>
+                       <th>Adotante</th>
+                       <th>Cpf do adotante</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <% dados.forEach((element)=>{ %>
+                    <tr>
+                        <td><%= element.horario %></td>
+                        <td><%= element.dia %></td>
+                        <td><%= element.nomeAdotante %></td>
+                        <td><%= element.cpfAdotante %></td>
+                    </tr>
+                   <% }); %>
+               </tbody>
+           </table>
+        </body>
+        <script>
+            window.addEventListener("load", window.print());
+        </script>
+    </html>

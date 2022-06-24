@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="./css/cadastro.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Gestores</h1>
+      <div class="titulo">
+        <img src="./img/find_shape.png" alt="" />
+      </div>
+
+      <form action="">
+        <label for="user">
+          <span>Se logar como:</span>
+          <select id="user" name="user">
+            <option value="Administrador">Administrador</option>
+            <option value="funcionario">Funcionário</option>
+          </select>
+        </label>
+
+        <label for="login">
+          <span>Login</span>
+          <input type="login" name="login" id="login" />
+        </label>
+
+        <label for="senha">
+          <span>Senha</span>
+          <div class="campo-senha">
+            <input type="password" name="senha" id="senha" />
+            <div id="olho" class="olho">
+              <i id="olho" class="fas fa-eye"></i>
+            </div>
+          </div>
+        </label>
+        <input id="logar" type="button" value="Login" style="cursor: pointer;" />
+      </form>
+
+      <button>
+        <a href="./index.html"> Voltar </a>
+      </button>
+    </main>
+
+    <script src="./js/cadastro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $("#logar").click(() => {
+        let data = {
+          login: $("#login").val(),
+          senha: $("#senha").val(),
+        };
+        let user = $("select").val();
+        if (user == "Administrador") {
+          axios.post("http://localhost:2424/admin/login", data).then((data) => {
+            let dados = data.data;
+            if (dados.Ok) {
+              alert(dados.Ok);
+              window.location.href = "/admin/index.html";
+            } else {
+              alert(dados.erro);
+            }
+          });
+        } else {
+          axios
+            .post("http://localhost:2424/funcionario/login", data)
+            .then((data) => {
+              let dados = data.data;
+              if (dados.Ok) {
+                alert(dados.Ok);
+                window.location.href = "/employee/index.html";
+              } else {
+                alert(dados.erro);
+              }
+            });
+        }
+      });
+    </script>
+  </body>
+</html>

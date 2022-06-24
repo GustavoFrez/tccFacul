@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Amigo Pet</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-paw"></i> Meu amigo Pet </a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="/frontEnd/pets.html">Consultar</a>
+        <a href="#como-funciona">Como Funciona</a>
+      </nav>
+
+      <div class="icones">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-cogs" id="config-btn"></div>
+      </div>
+
+      <form action="" class="login-form">
+        <h3>Login</h3>
+        <input
+          type="email"
+          name=""
+          id="inputLogin"
+          placeholder="Email"
+          class="box"
+        />
+        <input
+          type="password"
+          name=""
+          id="inputSenha"
+          placeholder="Senha"
+          class="box"
+        />
+
+        <input id="btnLogin" type="button" value="Entrar" class="btn" />
+
+        <div class="links">
+          <a href="/frontEnd/recuperacaoSenha.html">Esqueci a senha</a>
+          <a href="./telaCadastro.html">Criar conta</a>
+        </div>
+      </form>
+
+      <div class="menu-func">
+        <div class="links">
+          <a href="/frontEnd/loginGestores.html">Login admin</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="home" id="home">
+        <div class="bloco-home">
+          <h1>Seu <span>melhor amigo</span> está te esperando</h1>
+
+          <p>
+            Venha conhecer nossa ONG, é através da sua ajuda que conseguimos
+            cada dia mais achar um lar para os nossos pets
+          </p>
+        </div>
+        <div class="pata-icone1">
+          <img src="./img/pata1-shape.png" alt="" />
+        </div>
+        <div class="pata-icone2">
+          <img src="./img/pata2-shape.png" alt="" />
+        </div>
+      </section>
+
+      <section class="sobre" id="sobre">
+        <div class="container">
+          <div class="header-sobre">
+            <span><i class="fas fa-paw"></i></span>
+            <h1>A ONG</h1>
+            <div class="elemento-divisor-bloco">
+              <span class="elemento-dividor"> </span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-6">
+              <img src="./img/bg-home.jpg" alt="" width="100%" />
+            </div>
+
+            <div class="texto-sobre col-xl-6">
+              <h1>Nossa missão é ajudar todos os pets</h1>
+              <p>
+                Já parou pra pensar na infinidade de animaizinhos que estão
+                abandonados por causa da irresponsabilidade dos humanos? Adotar
+                um bichinho é dar uma vida digna a ele! Filhotes são muito fofos
+                e divertidos, mas crescem e muitas pessoas abandonam seus
+                animais quando já estão idosos ou doentes. Esses animaizinhos
+                são os que têm mais dificuldade de encontrar um novo lar. Se
+                você deseja adotar um animal, tenha certeza de que será amado
+                incondicionalmente! Mas lembre-se de que esse ato exige muita
+                responsabilidade, pois é uma vida que dependerá de você até o
+                fim! Se você deseja adotar, informe-se e prepare-se para receber
+                muito carinho!
+              </p>
+
+              <button class="btn btnFooter">
+                <a href="/frontEnd/pets.html" style="color: inherit"
+                  >Consulte PETS</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="valores" class="valores">
+        <h2>NOSSOS VALORES</h2>
+        <div class="elemento-divisor-bloco">
+          <span class="elemento-dividor"> </span>
+        </div>
+
+        <div class="valores-blocos">
+          <div class="bloco">
+            <div class="content">
+              <div class="icon-box">
+                <span><i class="fas fa-handshake"></i></span>
+              </div>
+              <h1>Lealdade</h1>
+            </div>
+          </div>
+
+          <div class="bloco">
+            <div class="content">
+              <div class="icon-box">
+                <span
+                  ><i
+                    style="color: rgb(146, 244, 247)"
+                    class="fas fa-balance-scale"
+                  ></i
+                ></span>
+              </div>
+              <h1>Respeito</h1>
+            </div>
+          </div>
+
+          <div class="bloco">
+            <div class="content">
+              <div class="icon-box">
+                <span
+                  ><i style="color: rgb(247, 146, 146)" class="fas fa-heart"></i
+                ></span>
+              </div>
+              <h1>Amor</h1>
+            </div>
+          </div>
+
+          <div class="bloco">
+            <div class="content">
+              <div class="icon-box">
+                <span
+                  ><i
+                    style="color: rgb(247, 173, 224)"
+                    class="fas fa-hand-holding-heart"
+                  ></i
+                ></span>
+              </div>
+              <h1>Empatia</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="como-funciona">
+        <h2>COMO FUNCIONA</h2>
+        <div class="elemento-divisor-bloco">
+          <span class="elemento-dividor"> </span>
+        </div>
+
+        <div class="como-funciona-blocos">
+          <div class="bloco">
+            <div class="elemento-icon-box">
+              <span class="elemento-icon">
+                <i class="fa fa-paw"></i>
+              </span>
+            </div>
+            <div class="elemento-content-box">
+              <h3>ENCONTRE SEU PET</h3>
+              <p>
+                O primeiro passo você precisa encontrar o seu amigo Pet em nossa
+                galeria, para isso você precisa efetuar o cadastro e depois só
+                clicar no botão
+                <strong style="color: #fba100">CONSULTAR</strong> em nosso menu
+                para ser redirecionado para nossa página de consulta.
+              </p>
+            </div>
+          </div>
+
+          <div class="bloco">
+            <div class="elemento-icon-box">
+              <span class="elemento-icon">
+                <i class="fa fa-clock"></i>
+              </span>
+            </div>
+            <div class="elemento-content-box">
+              <h3>MARQUE SUA VISITA</h3>
+              <p>
+                Depois de escolher o Pet que mais se identificou, é hora de
+                marcar sua visita, na página do perfil do PET, encontre um botão
+                chamado <strong style="color: #fba100">VISITAR</strong> e
+                selecione a data de interesse.
+              </p>
+            </div>
+          </div>
+
+          <div class="bloco">
+            <div class="elemento-icon-box">
+              <span class="elemento-icon">
+                <i class="fas fa-dog"></i>
+              </span>
+            </div>
+            <div class="elemento-content-box">
+              <h3>ADOTE</h3>
+              <p>
+                No dia da sua visita, nosso funcionário estará a disposição para
+                realizar o processo da adoção, ele será responsável por
+                cadastrar em nossos sistemas e assim você poderá levar seu amigo
+                para casa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer">
+        <img src="./img/top_wave.png" alt="" />
+
+        <div class="criador">
+          <p>Site criado por Gustavo Frez</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+      $("#btnLogin").click(() => {
+        let data = {
+          login: $("#inputLogin").val(),
+          senha: $("#inputSenha").val(),
+        };
+        axios
+          .post("http://localhost:2424/adotante/login", data)
+          .then((data) => {
+            let dados = data.data;
+            if (dados.Ok) {
+              alert(dados.Ok);
+              window.location.href = "/frontEnd/pets.html";
+            } else {
+              alert(dados.erro);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
